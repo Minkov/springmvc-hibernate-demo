@@ -1,11 +1,8 @@
 package com.minkov.app.web;
 
 import com.minkov.app.entities.Employee;
-import com.minkov.app.repositories.base.DataRepository;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.minkov.app.services.base.EmployeesService;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -13,24 +10,27 @@ import java.util.List;
 @RequestMapping("/api/employees")
 public class EmployeesApiController {
 
-    private final DataRepository<Employee> employeeData;
+    private final EmployeesService employeesService;
 
-    public EmployeesApiController(DataRepository<Employee> employeeData) {
-        this.employeeData = employeeData;
+    public EmployeesApiController(EmployeesService employeesService) {
+        this.employeesService = employeesService;
     }
 
     @RequestMapping(
             method = RequestMethod.GET
     )
-    public List<Employee> listEmployee() {
-        return employeeData.listAll();
+    public List<Employee> listEmployee(@RequestParam(required = false) String filter) {
+        if (filter == null || filter.isBlank()) {
+            return employeesService.listAllEmployees();
+        }
+
+        return employeesService.listEmployeesFilteredBy(filter);
     }
 
     @RequestMapping(
             method = RequestMethod.POST
     )
     public Employee createEmployee(@RequestBody Employee employee) {
-        employeeData.add(employee);
-        return employee;
+        return employeesService.createEmployee(employee.getName());
     }
 }
