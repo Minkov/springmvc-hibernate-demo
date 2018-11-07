@@ -1,36 +1,23 @@
 package com.minkov.app.entities;
 
-public class Employee {
-    private String firstName;
-    private String lastName;
-    private int id;
+import com.minkov.app.entities.base.DbEntity;
 
-    public Employee(String firstName, String lastName) {
-        setFirstName(firstName);
-        setLastName(lastName);
+import javax.persistence.*;
+
+
+@Entity(name = "employees")
+public class Employee extends DbEntity {
+    private String name;
+    public Employee() {
+
     }
 
-    public int getId() {
-        return id;
+    @Column
+    public String getName() {
+        return name;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getLastName() {
-        return lastName;
+    public void setName(String firstName) {
+        this.name = firstName;
     }
 }
