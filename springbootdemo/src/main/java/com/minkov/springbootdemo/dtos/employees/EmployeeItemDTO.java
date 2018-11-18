@@ -1,4 +1,4 @@
-package com.minkov.springbootdemo.dtos;
+package com.minkov.springbootdemo.dtos.employees;
 
 public class EmployeeItemDTO {
     private long id;

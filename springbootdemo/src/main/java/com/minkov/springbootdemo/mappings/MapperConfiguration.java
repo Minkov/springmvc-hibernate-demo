@@ -1,4 +1,4 @@
-package com.minkov.springbootdemo.config;
+package com.minkov.springbootdemo.mappings;
 
 import com.minkov.springbootdemo.mappings.MappingsInitializer;
 import org.modelmapper.ModelMapper;

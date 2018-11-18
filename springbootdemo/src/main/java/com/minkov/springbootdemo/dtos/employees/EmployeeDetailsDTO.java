@@ -1,4 +1,4 @@
-package com.minkov.springbootdemo.dtos;
+package com.minkov.springbootdemo.dtos.employees;
 
 import com.minkov.springbootdemo.entities.Employee;
 import com.minkov.springbootdemo.mappings.IHaveCustomMappings;

@@ -1,4 +1,4 @@
-package com.minkov.springbootdemo.dtos;
+package com.minkov.springbootdemo.dtos.departments;
 
 public class DepartmentCreateDTO {
     private String name;

@@ -1,4 +1,6 @@
-package com.minkov.springbootdemo.dtos;
+package com.minkov.springbootdemo.dtos.departments;
+
+import com.minkov.springbootdemo.dtos.employees.EmployeeItemDTO;
 
 import java.util.Set;
 

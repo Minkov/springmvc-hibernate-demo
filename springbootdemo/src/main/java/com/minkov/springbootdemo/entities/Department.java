@@ -10,9 +10,13 @@ public class Department {
     private String name;
     private Set<Employee> employees;
 
-
     public Department() {
         employees = new HashSet<>();
+    }
+
+    public Department(String name) {
+        this();
+        setName(name);
     }
 
     @Id
@@ -37,7 +41,8 @@ public class Department {
     @OneToMany(
             targetEntity = Employee.class,
             mappedBy = "department",
-            fetch = FetchType.EAGER
+            fetch = FetchType.EAGER,
+            cascade = CascadeType.ALL
     )
     public Set<Employee> getEmployees() {
         return employees;

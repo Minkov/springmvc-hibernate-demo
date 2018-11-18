@@ -1,8 +1,8 @@
 package com.minkov.springbootdemo.services.implementations;
 
-import com.minkov.springbootdemo.dtos.DepartmentCreateDTO;
-import com.minkov.springbootdemo.dtos.DepartmentDetailsDTO;
-import com.minkov.springbootdemo.dtos.DepartmentItemDTO;
+import com.minkov.springbootdemo.dtos.departments.DepartmentCreateDTO;
+import com.minkov.springbootdemo.dtos.departments.DepartmentDetailsDTO;
+import com.minkov.springbootdemo.dtos.departments.DepartmentItemDTO;
 import com.minkov.springbootdemo.entities.Department;
 import com.minkov.springbootdemo.repositories.DepartmentsRepository;
 import com.minkov.springbootdemo.services.DepartmentsService;
