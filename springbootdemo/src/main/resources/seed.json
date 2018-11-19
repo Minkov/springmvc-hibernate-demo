@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "Pesho",
+    "lastName": "Peshov",
+    "department": "Engineering"
+  },
+  {
+    "firstName": "Gosho",
+    "lastName": "Peshov",
+    "department": "Accounting"
+  },
+  {
+    "firstName": "Pesho",
+    "lastName": "Goshov",
+    "department": "HR"
+  },
+  {
+    "firstName": "Stamat",
+    "lastName": "Peshov",
+    "department": "Engineering"
+  },
+  {
+    "firstName": "Vanya",
+    "lastName": "Petrova",
+    "department": "HR"
+  },
+  {
+    "firstName": "Vanya",
+    "lastName": "Goshova",
+    "department": "Accounting"
+  }
+]

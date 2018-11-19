@@ -1,5 +1,7 @@
 package com.minkov.springbootdemo.dtos;
 
+import com.google.gson.annotations.Expose;
+
 public class EmployeeItemDTO {
     private long id;
     private String firstName;
